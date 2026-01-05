@@ -20,12 +20,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 @media (max-width: 768px) {
   * {
-    cursor: auto;
+    cursor: default;
   }
 
   .cursor-glow {

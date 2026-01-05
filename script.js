@@ -1,13 +1,5 @@
-// Custom Cursor Glow
-const cursorGlow = document.querySelector(".cursor-glow");
-document.addEventListener("mousemove", (e) => {
-    cursorGlow.style.left = e.clientX + "px";
-    cursorGlow.style.top = e.clientY + "px";
-});
-
-// Typing Effect
 const typingText = document.getElementById("typing");
-const phrases = ["Full Stack Developer", "Quick Learner", "", "Problem Solver"];
+const phrases = ["Full Stack Developer", "Quick Learner", "Problem Solver"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
