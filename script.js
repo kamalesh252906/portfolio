@@ -1,5 +1,13 @@
+// Custom Cursor Glow
+const cursorGlow = document.querySelector(".cursor-glow");
+document.addEventListener("mousemove", (e) => {
+    cursorGlow.style.left = e.clientX + "px";
+    cursorGlow.style.top = e.clientY + "px";
+});
+
+// Typing Effect
 const typingText = document.getElementById("typing");
-const phrases = ["Full Stack Developer", "Quick Learner", "Problem Solver"];
+const phrases = ["Backend Developer", "Problem Solver", "Quick Learner"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -93,11 +101,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("scroll", handleScroll);
 
-// Mobile Menu Toggle (Simplified placeholder)
+// Mobile Menu Toggle
 const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+
 if (menuBtn) {
     menuBtn.addEventListener("click", () => {
-        // Toggle mobile menu logic here
-        alert("Mobile menu coming soon!");
+        nav.classList.toggle("active");
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
+            nav.classList.remove("active");
+        }
+    });
+}
+
+/* Intro Overlay Interaction */
+const introOverlay = document.getElementById("intro-overlay");
+const exploreBtn = document.getElementById("explore-btn");
+
+if (introOverlay && exploreBtn) {
+    // Lock scroll initially
+    document.body.style.overflow = "hidden";
+
+    exploreBtn.addEventListener("click", () => {
+        // Fade out overlay
+        introOverlay.classList.add("fade-out");
+
+        // Unlock scroll after transition & remove from layout flow
+        setTimeout(() => {
+            document.body.style.overflow = "auto";
+            introOverlay.style.display = "none";
+        }, 800); // 800ms matches css transition
     });
 }

@@ -5,23 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamalesh E - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero-enhancements.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Devicon for Tech Logos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="bg-glow"></div>
     <div class="cursor-glow"></div>
+
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <h1 class="intro-title">Hello, I'm <span class="gradient-text">Kamalesh</span></h1>
+            <div class="intro-lines">
+                <p>I am a Computer Engineering graduate passionate about digital solutions.</p>
+                <p>Specializing in Full-Stack development to craft clean, efficient code.</p>
+                <p>From local platforms like 'Florry' to AI experiments, I build impact.</p>
+                <p>My journey blends technical skill with creative problem-solving.</p>
+                <p>Let's create something amazing together.</p>
+            </div>
+            <button id="explore-btn" class="btn btn-primary intro-btn">
+                <span>Explore Me</span>
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+    </div>
 
     <header id="header">
         <a href="#home" class="logo">KAMALESH<span> ELUMALAI</span></a>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Expertise</a>
+            <a href="#journey">Journey</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -34,29 +54,78 @@
     <main>
         <!-- HERO SECTION -->
         <section class="hero" id="home">
+            <!-- Animated Background Elements -->
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+
             <div class="hero-content">
-                <div class="badge reveal">Available for New Opportunities</div>
-                <h1 class="reveal">Built with <span>Passion.</span> Driven by <span>Code.</span></h1>
+                <h1 class="reveal hero-title">
+                    Hi, I'm <span class="gradient-text">Kamalesh</span>
+                </h1>
                 <div class="typing-container reveal">
-                    I am a <span id="typing"></span>
+                    <span id="typing"></span>
                 </div>
                 <p class="hero-desc reveal">
-                    A quick-learning software developer focused on crafting 
-                    user-centric digital experiences with modern technologies.
+                    Crafting elegant digital solutions with clean code and creative problem-solving. 
+                    Specialized in full-stack development with a passion for building impactful applications.
                 </p>
-                <div class="cta-group reveal">
-                    <a href="#projects" class="btn btn-primary">My Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                
+                <!-- Stats Cards -->
+                <div class="hero-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">93%</span>
+                            <span class="stat-label">Academic Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="cta-group reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Let's Talk</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+
                 <div class="social-links reveal">
-                    <a href="https://github.com/kamalesh252906" target="_blank" title="GitHub">GitHub</a>
-                    <a href="https://www.linkedin.com/in/kamalesh-elumalai-97989b308/" title="LinkedIn">LinkedIn</a>
+                    <a href="https://github.com/kamalesh252906" target="_blank" title="GitHub" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kamalesh-elumalai-97989b308/" target="_blank" title="LinkedIn" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
                 </div>
             </div>
+
             <div class="hero-visual reveal">
                 <div class="image-wrapper">
+                    <div class="image-decoration decoration-2"></div>
+                    
                     <img src="./images/kamalesh.jpg.jpg" alt="Kamalesh E" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600'">
-
                 </div>
             </div>
         </section>
@@ -67,70 +136,254 @@
                 <h2 class="section-title">About <span>Me</span></h2>
                 <p class="section-subtitle">A motivated Software Developer with a strong foundation in computer engineering.</p>
             </div>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>
-                        I graduated from <b>Central Polytechnic College</b> with a <b>93%</b> score, where I honed my analytical and technical skills in computer engineering.
-                    </p>
-                    <p>
-                        Currently, I am expanding my horizons at <b>FSSA</b>, mastering the art of building full-stack applications that solve real-world problems.
-                    </p>
-                    <div class="highlights">
-                        <div class="highlight-card">
-                            <h4>Fast Learner</h4>
-                            <p>Quick to adapt to new technologies and frameworks.</p>
-                        </div>
-                        <div class="highlight-card">
-                            <h4>Focused</h4>
-                            <p>Commitment to delivering high-quality, efficient code.</p>
+            <div class="about-text reveal" style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center;">
+                <p>
+                     I am a Computer Engineering graduate (93%) from Central Polytechnic College with a passion for building impactful digital solutions. My journey includes a BSNL internship and hands-on projects like 'Airstep' and 'Osteoarthritis Detection' that honed my teamwork and technical skills. Inspired by my father's flower business, I developed <b>'Florry,'</b> a full-stack platform to help local vendors compete digitally. I am a quick learner adept at HTML, CSS, JavaScript, Python, and SQL, constantly seeking to solve real-world problems through code.
+                </p>
+            </div>
+        </section>
+
+        <!-- JOURNEY / EXPERIENCE SECTION -->
+        <section class="experience-section" id="journey">
+            <div class="section-header reveal">
+                <h2 class="section-title">My <span>Journey</span></h2>
+                <p class="section-subtitle">Education, Internships, and Milestones.</p>
+            </div>
+            <div class="timeline reveal">
+                <!-- FSSA -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Recent</span>
+                        <h3>FSSA - Skill Enhancement</h3>
+                        <p>Specialized training in Full Stack Development and Soft Skills.</p>
+                        <div class="cert-container">
+                             <img src="./images/freshworks.jpg" alt="FSSA Certificate" class="cert-img">
+                             <span class="cert-caption">View Certificate</span>
                         </div>
                     </div>
                 </div>
-                <div class="skills-container reveal">
-                    <h3>Core Stack</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
-                        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
-                        <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-                        <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
-                        <span class="skill-tag"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
-                        <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java (Basics)</span>
-                        <span class="skill-tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-                        <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
-                        <span class="skill-tag"><i class="devicon-supabase-plain colored"></i> Supabase</span>
-                        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
-                        <span class="skill-tag"><i class="devicon-github-original colored"></i> GitHub</span>
-                        <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+
+                <!-- BSNL Internship -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Internship</span>
+                        <h3>BSNL</h3>
+                        <p>One-month internship gaining industry exposure in networking.</p>
+                        <div class="cert-container">
+                             <img src="./images/photo.avif" alt="BSNL Certificate" class="cert-img">
+                             <span class="cert-caption">View Certificate</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- College -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Graduated</span>
+                        <h3>Central Polytechnic College</h3>
+                        <p>Diploma in Computer Engineering with <b>93%</b>.</p>
+                        <div class="cert-container">
+                             <img src="./images/cpt.photo.avif" alt="Diploma Certificate" class="cert-img">
+                             <span class="cert-caption">View Certificate</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- SSLC -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Schooling</span>
+                        <h3>SSLC</h3>
+                        <p>Completed Secondary School Leaving Certificate at GHSS Velachery.</p>
+                        <div class="cert-container">
+                             <img src="./images/govt.webp" alt="SSLC Certificate" class="cert-img">
+                             <span class="cert-caption">View Certificate</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERTISE SECTION -->
-        <section class="services" id="services">
-            <div class="section-header reveal">
-                <h2 class="section-title">My <span>Expertise</span></h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <h3>Frontend Dev</h3>
-                    <p>Building responsive and interactive web interfaces using modern standards.</p>
+        <!-- CORE SKILLS SECTION -->
+        <section class="core-skills" id="skills">
+            <div class="skills-section-container reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Core <span>Skills</span></h2>
+                    <p class="section-subtitle">Technical proficiency across modern development stack</p>
                 </div>
-                <div class="service-card reveal">
-                    <h3>Backend Dev</h3>
-                    <p>Developing robust APIs and server-side logic using Python and FastAPI.</p>
-                </div>
-                <div class="service-card reveal">
-                    <h3>Database Logic</h3>
-                    <p>Designing efficient database schemas and managing data with PostgreSQL and Supabase.</p>
+                <div class="skills-two-column">
+                    <!-- Left Column -->
+                    <div class="skills-column">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 75%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 70%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 70%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 75%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 70%"></span></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="skills-column">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-java-plain colored"></i> Java (Basics)</span>
+                                <span>30%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 30%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 80%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 80%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-supabase-plain colored"></i> Supabase</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 50%"></span></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-github-original colored"></i> GitHub</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 45%"></span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- LANGUAGE SKILLS SECTION -->
+        <section class="languages" id="languages">
+             <div class="section-header reveal">
+                <h2 class="section-title">Language <span>Skills (English)</span></h2>
+            </div>
+            <div class="language-grid reveal">
+                <div class="lang-card">
+                    <div class="lang-icon-wrapper">
+                        <i class="fa-solid fa-ear-listen lang-icon"></i>
+                    </div>
+                    <span class="lang-name">Listening</span>
+                    <span class="lang-percentage">40%</span>
+                    <div class="lang-bar-mini"><span style="width: 40%"></span></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-icon-wrapper">
+                        <i class="fa-solid fa-pen-nib lang-icon"></i>
+                    </div>
+                    <span class="lang-name">Writing</span>
+                    <span class="lang-percentage">50%</span>
+                    <div class="lang-bar-mini"><span style="width: 50%"></span></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-icon-wrapper">
+                        <i class="fa-solid fa-comments lang-icon"></i>
+                    </div>
+                    <span class="lang-name">Speaking</span>
+                    <span class="lang-percentage">45%</span>
+                    <div class="lang-bar-mini"><span style="width: 45%"></span></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-icon-wrapper">
+                        <i class="fa-solid fa-book-open lang-icon"></i>
+                    </div>
+                    <span class="lang-name">Reading</span>
+                    <span class="lang-percentage">55%</span>
+                    <div class="lang-bar-mini"><span style="width: 55%"></span></div>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- PROJECTS SECTION -->
         <section class="projects" id="projects">
             <div class="section-header reveal">
                 <h2 class="section-title">Featured <span>Projects</span></h2>
+            </div>
+
+            <div class="reveal">
+                <h3 class="subsection-title">LifeSkills <span>Projects</span></h3>
+            </div>
+            <div class="projects-grid">
+                <!-- Airstep Project -->
+                <div class="project-card reveal">
+                    <div class="project-img-container">
+                        <img src="./images/WhatsApp Image 2026-01-09 at 9.16.20 AM.jpeg" alt="Airstep" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>Using:</span>
+                        <div class="project-tags">
+                            <span>Camphor</span>
+                            <span>Neem</span>
+                            <span>Aloe Vera</span>
+                        </div>
+                        <h3>Product Building</h3>
+                    </div>
+                </div>
+
+                <!-- Workplace Study Project -->
+                <div class="project-card reveal">
+                    <div class="project-img-container">
+                        <img src="./images/workplace study.jpg" alt="Workplace Study" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200'">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>Using:</span>
+                        <div class="project-tags">
+                            <span>LinkedIn</span>
+                            <span>Team Work</span>
+                        </div>
+                        <h3>Workplace Study</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal" style="margin-top: 5rem;">
+                <h3 class="subsection-title">Tech <span>Projects</span></h3>
             </div>
             <div class="projects-grid">
                 <!-- Event Management Project -->
@@ -145,11 +398,9 @@
                         <span>Using:</span>
                         <div class="project-tags">
                             <span>HTML</span>
-                            <span>,</span>
                             <span>CSS</span>
                         </div>
-                        <h3>Event Platform</h3>
-                        <p>A sophisticated static web application showcasing expert layout design and responsive UI principles.</p>
+                        <h3>Event Management</h3>
                     </div>
                 </div>
 
@@ -165,19 +416,13 @@
                         <span>Using:</span>
                         <div class="project-tags">
                             <span>HTML</span>
-                            <span>,</span>
                             <span>CSS</span>
-                            <span>,</span>
-                            <span>JS</span>
-                            <span>,</span>
+                            <span>JavaScript</span>
                             <span>Python</span>
-                            <span>,</span>
                             <span>FastAPI</span>
-                            <span>,</span>
                             <span>Supabase</span>
                         </div>
                         <h3>Florry – Flower Hub</h3>
-                        <p>A delivery application featuring real-time database integration, shop-based ordering, and a sleek customer dashboard.</p>
                     </div>
                 </div>
             </div>
@@ -187,7 +432,7 @@
         <section class="contact" id="contact">
             <div class="contact-card reveal">
                 <h2 class="section-title">Let's <span>Connect</span></h2>
-                <p>I'm currently available for freelance work and full-time opportunities. Have a project in mind?</p>
+                <p>I'm currently available for work and full-time opportunities.</p>
                 <div class="contact-methods">
                     <a href="mailto:cherrykamalesh@gmail.com" class="contact-btn">
                         <div class="text">

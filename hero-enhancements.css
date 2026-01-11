@@ -1,0 +1,297 @@
+/* Hero Enhancements & Professional Styling */
+
+/* Gradient Text for Name - High Specificity */
+.hero-content h1 .gradient-text,
+.intro-title .gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Background Shapes Animation */
+.hero-bg-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(11, 15, 25, 0.4) 0%, rgba(11, 15, 25, 0.95) 100%);
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: floatAnimation 20s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.shape-1 {
+    top: -10%;
+    right: -5%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.15), transparent 70%);
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    bottom: -20%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.1), transparent 70%);
+    /* Subtle blue hint for depth */
+    animation-delay: -5s;
+    animation-duration: 25s;
+}
+
+.shape-3 {
+    top: 40%;
+    left: 40%;
+    width: 25vw;
+    height: 25vw;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.08), transparent 60%);
+    animation-delay: -10s;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(30px, 30px) rotate(5deg);
+    }
+}
+
+/* Stats Cards */
+.hero-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: rgba(17, 24, 39, 0.6);
+    /* Glassy bg */
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition-fast);
+}
+
+.stat-card:hover {
+    background: rgba(17, 24, 39, 0.8);
+    border-color: var(--accent-main);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(250, 204, 21, 0.1);
+    border-radius: 12px;
+    color: var(--accent-main);
+    font-size: 1.4rem;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* Image Decorations */
+.image-wrapper {
+    position: relative;
+    /* Ensure existing styles don't conflict, override if necessary */
+}
+
+.image-decoration {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Decoration 1 (Dashed Circle) removed as per user cleanup */
+
+.decoration-2 {
+    bottom: -30px;
+    left: -30px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.05), transparent 70%);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Typing Effect Cursor */
+.typing-container #typing::after {
+    content: "|";
+    color: var(--accent-main);
+    animation: blink 1s step-end infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* 
+   NEW: INTRO OVERLAY LANDING PAGE 
+   Covers the screen initially, hides on 'Explore Me' click
+*/
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Deep animated gradient background */
+    background: linear-gradient(135deg, #050810 0%, #111827 100%);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+#intro-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-50px);
+}
+
+.intro-content {
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-out forwards 0.3s;
+}
+
+.intro-title {
+    font-size: 4.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.intro-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.intro-lines p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.intro-btn {
+    font-size: 1rem;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+}
+
+.intro-btn i {
+    transition: transform 0.3s ease;
+}
+
+.intro-btn:hover i {
+    transform: translateY(5px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet/Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .hero-stats {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-bg-shapes {
+        opacity: 0.6;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Intro Mobile */
+    .intro-title {
+        font-size: 2.8rem;
+    }
+
+    .intro-lines p {
+        font-size: 1rem;
+    }
+}
