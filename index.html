@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamalesh E - Portfolio</title>
+    <title>Kmalesh E - Portfolio</title>
+    <!-- Combined Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hero-enhancements.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Devicon for Tech Logos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -19,14 +27,13 @@
     <div class="bg-glow"></div>
     <div class="cursor-glow"></div>
 
+    <!-- Intro Overlay -->
     <div id="intro-overlay">
         <div class="intro-content">
             <h1 class="intro-title">Hello, I'm <span class="gradient-text">Kamalesh</span></h1>
             <div class="intro-lines">
-                <p>I am a Computer Engineering graduate passionate about digital solutions.</p>
-                <p>Specializing in Full-Stack development to craft clean, efficient code.</p>
-                <p>From local platforms like 'Florry' to AI experiments, I build impact.</p>
-                <p>My journey blends technical skill with creative problem-solving.</p>
+                <p>As a student, I am learning Full-Stack Development and improving my skills in writing clean code while understanding the interaction between frontend and backend.</p>
+                <p>I am improving my technical skills and problem-solving mindset, and I enjoy learning and building useful applications.</p>
                 <p>Let's create something amazing together.</p>
             </div>
             <button id="explore-btn" class="btn btn-primary intro-btn">
@@ -36,12 +43,13 @@
         </div>
     </div>
 
+    <!-- Sticky Header with Scroll Navigation -->
     <header id="header">
         <a href="#home" class="logo">KAMALESH<span> ELUMALAI</span></a>
         <nav>
-            <a href="#home">Home</a>
+            <a href="#home" class="active-nav">Home</a>
             <a href="#about">About</a>
-            <a href="#journey">Journey</a>
+
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -69,34 +77,9 @@
                     <span id="typing"></span>
                 </div>
                 <p class="hero-desc reveal">
-                    Crafting elegant digital solutions with clean code and creative problem-solving. 
-                    Specialized in full-stack development with a passion for building impactful applications.
+                    I build simple and clean digital solutions using clear code and creative problem-solving.
+I am learning Full-Stack Development and enjoy building useful and impactful applications.
                 </p>
-                
-                <!-- Stats Cards -->
-                <div class="hero-stats reveal">
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="stat-info">
-                            <span class="stat-number">93%</span>
-                            <span class="stat-label">Academic Score</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                        <div class="stat-info">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Projects Built</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-                        <div class="stat-info">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Technologies</span>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="cta-group reveal">
                     <a href="#projects" class="btn btn-primary">
@@ -134,71 +117,21 @@
         <section class="about" id="about">
             <div class="section-header reveal">
                 <h2 class="section-title">About <span>Me</span></h2>
-                <p class="section-subtitle">A motivated Software Developer with a strong foundation in computer engineering.</p>
+                <!-- <p class="section-subtitle">A motivated Software Developer with a strong foundation in computer engineering.</p> -->
             </div>
-            <div class="about-text reveal" style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center;">
-                <p>
-                     I am a Computer Engineering graduate (93%) from Central Polytechnic College with a passion for building impactful digital solutions. My journey includes a BSNL internship and hands-on projects like 'Airstep' and 'Osteoarthritis Detection' that honed my teamwork and technical skills. Inspired by my father's flower business, I developed <b>'Florry,'</b> a full-stack platform to help local vendors compete digitally. I am a quick learner adept at HTML, CSS, JavaScript, Python, and SQL, constantly seeking to solve real-world problems through code.
+            <div class="about-text reveal">
+                <p style="margin-bottom: 1rem;">
+                    Hi, I’m Kamalesh from Chennai. I completed my secondary education at GHSS Velachery. After that, I studied <span class="highlight-text">Computer Engineering</span> at Central Polytechnic College, where I secured <span class="highlight-text">93% overall</span>.
                 </p>
-            </div>
-        </section>
-
-        <!-- JOURNEY / EXPERIENCE SECTION -->
-        <section class="experience-section" id="journey">
-            <div class="section-header reveal">
-                <h2 class="section-title">My <span>Journey</span></h2>
-                <p class="section-subtitle">Education, Internships, and Milestones.</p>
-            </div>
-            <div class="timeline reveal">
-                <!-- FSSA -->
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Recent</span>
-                        <h3>FSSA - Skill Enhancement</h3>
-                        <p>Specialized training in Full Stack Development and Soft Skills.</p>
-                        <div class="cert-container">
-                             <img src="./images/freshworks.jpg" alt="FSSA Certificate" class="cert-img">
-                             <span class="cert-caption">View Certificate</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BSNL Internship -->
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Internship</span>
-                        <h3>BSNL</h3>
-                        <p>One-month internship gaining industry exposure in networking.</p>
-                        <div class="cert-container">
-                             <img src="./images/photo.avif" alt="BSNL Certificate" class="cert-img">
-                             <span class="cert-caption">View Certificate</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- College -->
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Graduated</span>
-                        <h3>Central Polytechnic College</h3>
-                        <p>Diploma in Computer Engineering with <b>93%</b>.</p>
-                        <div class="cert-container">
-                             <img src="./images/cpt.photo.avif" alt="Diploma Certificate" class="cert-img">
-                             <span class="cert-caption">View Certificate</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- SSLC -->
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Schooling</span>
-                        <h3>SSLC</h3>
-                        <p>Completed Secondary School Leaving Certificate at GHSS Velachery.</p>
-                        <div class="cert-container">
-                             <img src="./images/govt.webp" alt="SSLC Certificate" class="cert-img">
-                             <span class="cert-caption">View Certificate</span>
-                        </div>
-                    </div>
-                </div>
+                <p style="margin-bottom: 1rem;">
+                    Currently, I am a student at Freshworks STS Software Academy. Here, I am learning both technical skills and life skills. My technical learning includes <span class="skill-highlight">HTML, CSS, JavaScript, Python, PostgreSQL, and FastAPI</span>. Along with this, I am improving my problem-solving skills and English communication.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    In life skills training, I have learnt <span class="highlight-text">time management</span>, <span class="highlight-text">teamwork</span>, and how to work professionally with people of different genders in a workplace environment.
+                </p>
+                <p>
+                    My goal is to become a <span class="highlight-text">Backend Developer</span>, and I am continuously working to improve my skills and build real-world applications.
+                </p>
             </div>
         </section>
 
@@ -215,16 +148,16 @@
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML5</span>
-                                <span>75%</span>
+                                <span>80%</span>
                             </div>
-                            <div class="progress-line"><span style="width: 75%"></span></div>
+                            <div class="progress-line"><span style="width: 80%"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS3</span>
-                                <span>70%</span>
+                                <span>75%</span>
                             </div>
-                            <div class="progress-line"><span style="width: 70%"></span></div>
+                            <div class="progress-line"><span style="width: 75%"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
@@ -240,24 +173,31 @@
                             </div>
                             <div class="progress-line"><span style="width: 75%"></span></div>
                         </div>
-                        <div class="skill-item">
+                        <!-- <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
-                                <span>70%</span>
+                                <span>80%</span>
                             </div>
-                            <div class="progress-line"><span style="width: 70%"></span></div>
-                        </div>
+                            <div class="progress-line"><span style="width: 80%"></span></div>
+                        </div> -->
                     </div>
 
                     <!-- Right Column -->
                     <div class="skills-column">
                         <div class="skill-item">
                             <div class="skill-info">
+                                <span class="skill-name"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-line"><span style="width: 80%"></span></div>
+                        </div>
+                        <!-- <div class="skill-item">
+                            <div class="skill-info">
                                 <span class="skill-name"><i class="devicon-java-plain colored"></i> Java (Basics)</span>
                                 <span>30%</span>
                             </div>
-                            <div class="progress-line"><span style="width: 30%"></span></div>
-                        </div>
+                            <div class="progress-line"><span style="width: 30%"></span></div> -->
+                        <!-- </div> -->
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
@@ -272,19 +212,19 @@
                             </div>
                             <div class="progress-line"><span style="width: 80%"></span></div>
                         </div>
-                        <div class="skill-item">
+                        <!-- <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name"><i class="devicon-supabase-plain colored"></i> Supabase</span>
                                 <span>50%</span>
                             </div>
                             <div class="progress-line"><span style="width: 50%"></span></div>
-                        </div>
+                        </div> -->
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-github-original colored"></i> GitHub</span>
-                                <span>45%</span>
+                                <span class="skill-name"><i class="fab fa-github" style="color: #ffffff;"></i> GitHub</span>
+                                <span>60%</span>
                             </div>
-                            <div class="progress-line"><span style="width: 45%"></span></div>
+                            <div class="progress-line"><span style="width: 60%"></span></div>
                         </div>
                     </div>
                 </div>
@@ -294,7 +234,7 @@
         <!-- LANGUAGE SKILLS SECTION -->
         <section class="languages" id="languages">
              <div class="section-header reveal">
-                <h2 class="section-title">Language <span>Skills (English)</span></h2>
+                <h2 class="section-title">English <span>Skills</span></h2>
             </div>
             <div class="language-grid reveal">
                 <div class="lang-card">
@@ -339,50 +279,8 @@
             <div class="section-header reveal">
                 <h2 class="section-title">Featured <span>Projects</span></h2>
             </div>
-
-            <div class="reveal">
-                <h3 class="subsection-title">LifeSkills <span>Projects</span></h3>
-            </div>
-            <div class="projects-grid">
-                <!-- Airstep Project -->
-                <div class="project-card reveal">
-                    <div class="project-img-container">
-                        <img src="./images/WhatsApp Image 2026-01-09 at 9.16.20 AM.jpeg" alt="Airstep" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link-btn">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span>Using:</span>
-                        <div class="project-tags">
-                            <span>Camphor</span>
-                            <span>Neem</span>
-                            <span>Aloe Vera</span>
-                        </div>
-                        <h3>Product Building</h3>
-                    </div>
-                </div>
-
-                <!-- Workplace Study Project -->
-                <div class="project-card reveal">
-                    <div class="project-img-container">
-                        <img src="./images/workplace study.jpg" alt="Workplace Study" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link-btn">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span>Using:</span>
-                        <div class="project-tags">
-                            <span>LinkedIn</span>
-                            <span>Team Work</span>
-                        </div>
-                        <h3>Workplace Study</h3>
-                    </div>
-                </div>
-            </div>
             
-            <div class="reveal" style="margin-top: 5rem;">
+            <div class="reveal">
                 <h3 class="subsection-title">Tech <span>Projects</span></h3>
             </div>
             <div class="projects-grid">
@@ -426,6 +324,43 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="reveal" style="margin-top: 5rem;">
+                <h3 class="subsection-title">LifeSkills <span>Projects</span></h3>
+            </div>
+            <div class="projects-grid">
+                <!-- Airstep Project -->
+                <div class="project-card reveal">
+                    <div class="project-img-container">
+                        <img src="./images/WhatsApp Image 2026-01-09 at 9.16.20 AM.jpeg" alt="Airstep" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                           During product development, I enhanced my <span class="highlight-text">time management</span> and <span class="highlight-text">teamwork skills</span>. I also learnt to work <span class="highlight-text">professionally in diverse environments</span>, respecting different perspectives and <span class="highlight-text">collaborating effectively</span> with people of all genders.
+                        </p>
+                        <h3><i class="fas fa-cubes" style="margin-right: 10px; color: var(--accent-main);"></i>Product Building</h3>
+                    </div>
+                </div>
+
+                <!-- Workplace Study Project -->
+                <div class="project-card reveal">
+                    <div class="project-img-container">
+                        <img src="./images/workplace study.jpg" alt="Workplace Study" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200'">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                          In the workplace, I learnt how to <span class="highlight-text">collaborate effectively</span> as part of a team, <span class="highlight-text">guide others</span>, and address mistakes in a respectful and constructive manner. I also developed the ability to understand different viewpoints and <span class="highlight-text">communicate my ideas clearly</span>.
+                        </p>
+                        <h3><i class="fas fa-briefcase" style="margin-right: 10px; color: var(--accent-main);"></i>Workplace Study</h3>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- CONTACT SECTION -->
@@ -453,7 +388,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Kamalesh E. Crafted with and Coffee.</p>
+            <p>&copy; 2026 Kamalesh E. Crafted with code and Coffee.</p>
             <div class="footer-links">
                 <a href="#home">Back to top ↑</a>
             </div>

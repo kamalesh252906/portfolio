@@ -1,6 +1,152 @@
-/* Hero Enhancements & Professional Styling */
+/* Home / Hero Specific Styles */
 
-/* Gradient Text for Name - High Specificity */
+/* Hero Section Layout */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    color: var(--text-primary);
+}
+
+.hero-content h1 span {
+    color: var(--accent-main);
+    display: inline-block;
+}
+
+.hero-desc {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.typing-container {
+    font-size: 1.8rem;
+    color: var(--accent-light);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: rgba(250, 204, 21, 0.1);
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    border-radius: 50px;
+    color: var(--accent-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.social-links a {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-fast);
+}
+
+.social-links a:hover {
+    color: var(--accent-highlight);
+    transform: translateY(-2px);
+}
+
+/* Hero Visual & Photo Styling */
+.image-wrapper {
+    position: relative;
+    width: 380px;
+    height: 480px;
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(250, 204, 21, 0.3);
+    box-shadow:
+        0 0 0 10px rgba(11, 15, 25, 0.8),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        20px 20px 0 rgba(250, 204, 21, 0.1);
+    transition: var(--transition-smooth);
+    filter: grayscale(20%) contrast(110%);
+}
+
+.image-wrapper:hover img {
+    transform: translateY(-10px) scale(1.02);
+    filter: grayscale(0%) contrast(100%);
+    box-shadow:
+        0 0 0 10px rgba(11, 15, 25, 0.8),
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        15px 15px 0 rgba(250, 204, 21, 0.2);
+    border-color: var(--accent-main);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    background: var(--bg-card);
+    padding: 2.2rem;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.experience-badge span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-main);
+    line-height: 1;
+}
+
+.experience-badge p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+/* === FROM hero-enhancements.css === */
+
+/* Gradient Text */
 .hero-content h1 .gradient-text,
 .intro-title .gradient-text {
     background: var(--accent-gradient);
@@ -45,7 +191,6 @@
     width: 40vw;
     height: 40vw;
     background: radial-gradient(circle, rgba(29, 78, 216, 0.1), transparent 70%);
-    /* Subtle blue hint for depth */
     animation-delay: -5s;
     animation-duration: 25s;
 }
@@ -69,78 +214,12 @@
     }
 }
 
-/* Stats Cards */
-.hero-stats {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 3.5rem;
-}
-
-.stat-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.2rem;
-    background: rgba(17, 24, 39, 0.6);
-    /* Glassy bg */
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    transition: var(--transition-fast);
-}
-
-.stat-card:hover {
-    background: rgba(17, 24, 39, 0.8);
-    border-color: var(--accent-main);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.stat-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: rgba(250, 204, 21, 0.1);
-    border-radius: 12px;
-    color: var(--accent-main);
-    font-size: 1.4rem;
-}
-
-.stat-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-number {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    line-height: 1.1;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-}
-
 /* Image Decorations */
-.image-wrapper {
-    position: relative;
-    /* Ensure existing styles don't conflict, override if necessary */
-}
-
 .image-decoration {
     position: absolute;
     border-radius: 50%;
     z-index: -1;
 }
-
-/* Decoration 1 (Dashed Circle) removed as per user cleanup */
 
 .decoration-2 {
     bottom: -30px;
@@ -148,16 +227,6 @@
     width: 150px;
     height: 150px;
     background: radial-gradient(circle, rgba(250, 204, 21, 0.05), transparent 70%);
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 /* Typing Effect Cursor */
@@ -180,25 +249,13 @@
     }
 }
 
-/* 
-   NEW: INTRO OVERLAY LANDING PAGE 
-   Covers the screen initially, hides on 'Explore Me' click
-*/
-/* 
-   NEW: INTRO OVERLAY LANDING PAGE 
-   Covers the screen initially, hides on 'Explore Me' click
-*/
-/* 
-   NEW: INTRO OVERLAY LANDING PAGE 
-   Covers the screen initially, hides on 'Explore Me' click
-*/
+/* INTRO OVERLAY */
 #intro-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    /* Techies Image Background with Dark Overlay for readability */
     background:
         linear-gradient(to right, rgba(2, 6, 23, 0.95), rgba(15, 23, 42, 0.85)),
         url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
@@ -227,11 +284,10 @@
     transform: translateY(30px);
     animation: fadeInUp 1.2s ease-out forwards 0.3s;
     text-align: left;
-    /* Shift to Professional Left Alignment */
 }
 
 .intro-title {
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
     color: var(--text-primary);
     line-height: 1.1;
@@ -241,8 +297,7 @@
 
 .intro-title .gradient-text {
     display: block;
-    /* Name on new line for impact */
-    font-size: 6rem;
+    font-size: 4.5rem;
     margin-top: 0.5rem;
 }
 
@@ -252,7 +307,6 @@
     gap: 1.2rem;
     margin-bottom: 3.5rem;
     border-left: 3px solid var(--accent-main);
-    /* Professional accent line */
     padding-left: 2.5rem;
 }
 
@@ -269,10 +323,8 @@
     font-size: 1.1rem;
     padding: 1.2rem 3.5rem;
     border-radius: 12px;
-    /* Smoother corner */
     box-shadow: 0 10px 30px rgba(250, 204, 21, 0.15);
     margin-left: 2.5rem;
-    /* Align with text (border width + padding) */
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -299,10 +351,17 @@
     }
 }
 
-/* Tablet/Mobile Responsiveness */
+/* Responsive */
 @media (max-width: 1024px) {
-    .hero-stats {
-        flex-wrap: wrap;
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        max-width: 450px;
+        height: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -311,22 +370,47 @@
         opacity: 0.6;
     }
 
-    .hero-stats {
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .stat-card {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Intro Mobile */
     .intro-title {
         font-size: 2.8rem;
     }
 
     .intro-lines p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .image-wrapper img {
+        width: 90%;
+        height: 90%;
     }
 }
