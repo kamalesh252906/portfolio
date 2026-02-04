@@ -138,3 +138,19 @@
         gap: 4rem;
     }
 }
+
+/* LifeSkills Projects - Remove Hover Effects */
+.project-card.lifeskills-card:hover {
+    transform: none !important;
+    border-color: var(--glass-border) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.project-card.lifeskills-card:hover .project-img {
+    transform: none !important;
+}
+
+.project-card.lifeskills-card:hover .project-overlay {
+    opacity: 0 !important;
+    pointer-events: none;
+}
