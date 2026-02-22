@@ -126,6 +126,67 @@ if (menuBtn) {
     });
 }
 
+// Presentation Deck Logic
+const deckWrapper = document.querySelector(".deck-wrapper");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const currentNum = document.querySelector(".current-num");
+const progressFill = document.querySelector(".progress-fill");
+
+let currentSlide = 0;
+const totalSlides = 7;
+
+function updateDeck() {
+    if (!deckWrapper) return;
+
+    // Move deck
+    deckWrapper.style.transform = `translateX(-${currentSlide * 100}vw)`;
+
+    // Update numbers & progress
+    if (currentNum) currentNum.textContent = `0${currentSlide + 1}`;
+    if (progressFill) progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+
+    // Button states
+    if (prevBtn) prevBtn.disabled = currentSlide === 0;
+    if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
+
+    // Trigger reveal animations for content in new slide
+    const activeSlide = document.getElementById(`slide-${currentSlide + 1}`);
+    if (activeSlide) {
+        activeSlide.classList.add("active");
+    }
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateDeck();
+        }
+    });
+}
+
+if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateDeck();
+        }
+    });
+}
+
+// Support Arrow Keys
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") nextBtn?.click();
+    if (e.key === "ArrowLeft") prevBtn?.click();
+});
+
+// Initialize Deck
+document.addEventListener("DOMContentLoaded", () => {
+    updateDeck();
+    // ... existing init code ...
+});
+
 /* Intro Overlay Interaction */
 const introOverlay = document.getElementById("intro-overlay");
 const exploreBtn = document.getElementById("explore-btn");

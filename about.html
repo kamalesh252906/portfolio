@@ -35,165 +35,203 @@
     </header>
 
     <main>
-        <!-- ABOUT SECTION -->
-        <section class="about" id="about">
-            <div class="section-header reveal">
-                <h2 class="section-title">About <span>Me</span></h2>
-                <p class="section-subtitle">A motivated Software Developer with a strong foundation in computer engineering.</p>
+        <!-- PRESENTATION DECK -->
+        <div class="deck-container">
+            <!-- Slide Navigation Controls -->
+            <div class="deck-controls">
+                <button class="control-btn prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <div class="deck-progress">
+                    <span class="current-num">01</span>
+                    <div class="progress-bar-wrap"><div class="progress-fill"></div></div>
+                    <span class="total-num">07</span>
+                </div>
+                <button class="control-btn next-btn"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
-            <div class="about-text reveal">
-                <p style="margin-bottom: 1rem;">
-                    Hi, I’m Kamalesh from Chennai.
-                </p>
-                <p style="margin-bottom: 1rem;">
-                    I completed my secondary education at GHSS Velachery. After that, I studied Computer Engineering at Central Polytechnic College, where I secured 93% overall.
-                </p>
-                <p style="margin-bottom: 1rem;">
-                    Currently, I am a student at Freshworks STS Software Academy. Here, I am learning both technical skills and life skills. My technical learning includes HTML, CSS, JavaScript, Python, PostgreSQL, and FastAPI. Along with this, I am improving my problem-solving skills and English communication.
-                </p>
-                <p style="margin-bottom: 1rem;">
-                    In life skills training, I have learned time management, teamwork, and how to work professionally with people of different genders in a workplace environment.
-                </p>
-                <p>
-                    My goal is to become a Backend Developer, and I am continuously working to improve my skills and build real-world applications.
-                </p>
-            </div>
-        </section>
 
-        <!-- CORE SKILLS SECTION -->
-        <section class="core-skills" id="skills">
-            <div class="skills-section-container reveal">
-                <div class="section-header">
-                    <h2 class="section-title">Core <span>Skills</span></h2>
-                    <p class="section-subtitle">Technical proficiency across modern development stack</p>
-                </div>
-                <div class="skills-two-column">
-                    <!-- Left Column -->
-                    <div class="skills-column">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML5</span>
-                                <span>75%</span>
+            <div class="deck-wrapper">
+                <!-- SLIDE 1: IDENTITY & ORIGIN -->
+                <section class="deck-slide" id="slide-1">
+                    <div class="slide-inner">
+                        <div class="collage-layer">
+                            <div class="collage-item main-portrait">
+                                <img src="images/kamalesh.jpg.jpg" alt="Kamalesh">
                             </div>
-                            <div class="progress-line"><span style="width: 75%"></span></div>
+                            <div class="collage-item city-tag">
+                                <i class="fa-solid fa-map-pin"></i>
+                                <span>Chennai, TN</span>
+                            </div>
+                            <div class="collage-item floating-shape-1"></div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS3</span>
-                                <span>70%</span>
+                        <div class="text-layer">
+                            <h1 class="hero-name">Kamalesh<span> Elumalai</span></h1>
+                            <p class="hero-sub">From the vibrant streets of <b>Chennai</b> to the world of <b>Backend Engineering</b>.</p>
+                            <div class="slide-indicators">
+                                <span>Native</span>
+                                <span>Developer</span>
                             </div>
-                            <div class="progress-line"><span style="width: 70%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 70%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 75%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 70%"></span></div>
                         </div>
                     </div>
+                </section>
 
-                    <!-- Right Column -->
-                    <div class="skills-column">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-java-plain colored"></i> Java (Basics)</span>
-                                <span>30%</span>
+                <!-- SLIDE 2: EDUCATION -->
+                <section class="deck-slide" id="slide-2">
+                    <div class="slide-inner split">
+                        <div class="text-layer">
+                            <span class="slide-category">Education</span>
+                            <h2 class="slide-heading">The <span>Academic</span> Blueprint</h2>
+                            <p class="slide-text">Building a strong logical foundation through engineering excellence.</p>
+                            
+                            <div class="edu-path">
+                                <div class="edu-node">
+                                    <div class="node-circle"></div>
+                                    <div class="node-info">
+                                        <h4>Secondary Education</h4>
+                                        <p>GHSS Velachery</p>
+                                    </div>
+                                </div>
+                                <div class="edu-node destacado">
+                                    <div class="node-circle"></div>
+                                    <div class="node-info">
+                                        <h4>Computer Engineering</h4>
+                                        <p>Central Polytechnic College</p>
+                                        <span class="score-tag">93% Grade</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="progress-line"><span style="width: 30%"></span></div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-                                <span>80%</span>
+                        <div class="collage-layer grid-collage">
+                            <div class="collage-item photo-stack-1">
+                                <img src="images/cpt.photo.avif" alt="College">
                             </div>
-                            <div class="progress-line"><span style="width: 80%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-mysql-plain colored"></i> MySQL</span>
-                                <span>80%</span>
+                            <div class="collage-item photo-stack-2">
+                                <img src="images/govt.webp" alt="School">
                             </div>
-                            <div class="progress-line"><span style="width: 80%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="devicon-supabase-plain colored"></i> Supabase</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 50%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name"><i class="fab fa-github" style="color: #ffffff;"></i> GitHub</span>
-                                <span>45%</span>
-                            </div>
-                            <div class="progress-line"><span style="width: 45%"></span></div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- LANGUAGE SKILLS SECTION -->
-        <section class="languages" id="languages">
-             <div class="section-header reveal">
-                <h2 class="section-title">Language <span>Skills (English)</span></h2>
+                <!-- SLIDE 3: BACKGROUND & FAMILY -->
+                <section class="deck-slide" id="slide-3">
+                    <div class="slide-inner centered">
+                        <div class="abstract-collage">
+                            <div class="root-circle">
+                                <i class="fa-solid fa-hands-holding-child"></i>
+                            </div>
+                            <div class="orbit-item item-1"><i class="fa-solid fa-house"></i></div>
+                            <div class="orbit-item item-2"><i class="fa-solid fa-heart"></i></div>
+                            <div class="orbit-item item-3"><i class="fa-solid fa-shield"></i></div>
+                        </div>
+                        <div class="text-layer">
+                            <span class="slide-category">Roots</span>
+                            <h2 class="slide-heading">Family & <span>Values</span></h2>
+                            <p class="slide-text max-centered">Coming from a background that prioritizes resilience and growth. My family is the driving force behind my technical ambitions.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SLIDE 4: FSSA JOURNEY -->
+                <section class="deck-slide" id="slide-4">
+                    <div class="slide-inner">
+                        <div class="text-layer layer-full">
+                            <span class="slide-category">The Transformation</span>
+                            <h2 class="slide-heading">Freshworks <span>STS Academy</span></h2>
+                            
+                            <div class="journey-grid">
+                                <div class="journey-desc">
+                                    <p>An intensive journey at <b>FSSA</b>, mastering modern backend technologies while cultivating professional workplace ethics and life skills.</p>
+                                    <div class="skill-chips">
+                                        <span>Python</span>
+                                        <span>PostgreSQL</span>
+                                        <span>FastAPI</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="journey-collage">
+                                    <div class="collage-item img-academy">
+                                        <img src="images/freshworks.jpg" alt="Academy">
+                                    </div>
+                                    <div class="collage-item img-study">
+                                        <img src="images/workplace study.jpg" alt="Learning">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SLIDE 5: MILESTONES -->
+                <section class="deck-slide" id="slide-5">
+                    <div class="slide-inner split-alt">
+                        <div class="collage-layer trophy-collage">
+                            <div class="floating-trophy">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div class="stat-card">
+                                <h3>93%</h3>
+                                <p>Academic Rank</p>
+                            </div>
+                        </div>
+                        <div class="text-layer">
+                            <span class="slide-category">Milestones</span>
+                            <h2 class="slide-heading">Key <span>Achievements</span></h2>
+                            <ul class="achievement-bullets">
+                                <li>Top Graduate in Computer Engineering</li>
+                                <li>Transitioned to Full-Stack Backend Specialist</li>
+                                <li>Mastered Real-world API Architectures</li>
+                                <li>Fluent in Technical Team Communications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="language-grid reveal">
-                <div class="lang-card">
-                    <div class="lang-icon-wrapper">
-                        <i class="fa-solid fa-ear-listen lang-icon"></i>
+        </div>
+
+                <!-- SLIDE 6: TECHNICAL SKILLS -->
+                <section class="deck-slide" id="slide-6">
+                    <div class="slide-inner centered">
+                        <div class="text-layer">
+                            <span class="slide-category">Expertise</span>
+                            <h2 class="slide-heading">Core <span>Skills</span></h2>
+                        </div>
+                        <div class="skills-grid-presentation">
+                            <div class="skill-pill"><i class="devicon-python-plain colored"></i> Python</div>
+                            <div class="skill-pill"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
+                            <div class="skill-pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+                            <div class="skill-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                            <div class="skill-pill"><i class="devicon-html5-plain colored"></i> HTML5</div>
+                            <div class="skill-pill"><i class="devicon-css3-plain colored"></i> CSS3</div>
+                        </div>
                     </div>
-                    <span class="lang-name">Listening</span>
-                    <span class="lang-percentage">40%</span>
-                    <div class="lang-bar-mini"><span style="width: 40%"></span></div>
-                </div>
-                <div class="lang-card">
-                    <div class="lang-icon-wrapper">
-                        <i class="fa-solid fa-pen-nib lang-icon"></i>
+                </section>
+
+                <!-- SLIDE 7: LANGUAGES -->
+                <section class="deck-slide" id="slide-7">
+                    <div class="slide-inner centered">
+                         <div class="text-layer">
+                            <span class="slide-category">Communication</span>
+                            <h2 class="slide-heading">Language <span>Proficiency</span></h2>
+                        </div>
+                        <div class="lang-collage">
+                            <div class="lang-box">
+                                <h4>English</h4>
+                                <div class="lang-meter"><div class="meter-fill" style="width: 75%"></div></div>
+                                <span>Advanced Proficiency</span>
+                            </div>
+                            <div class="lang-box">
+                                <h4>Tamil</h4>
+                                <div class="lang-meter"><div class="meter-fill" style="width: 100%"></div></div>
+                                <span>Native Speaker</span>
+                            </div>
+                        </div>
                     </div>
-                    <span class="lang-name">Writing</span>
-                    <span class="lang-percentage">50%</span>
-                    <div class="lang-bar-mini"><span style="width: 50%"></span></div>
-                </div>
-                <div class="lang-card">
-                    <div class="lang-icon-wrapper">
-                        <i class="fa-solid fa-comments lang-icon"></i>
-                    </div>
-                    <span class="lang-name">Speaking</span>
-                    <span class="lang-percentage">45%</span>
-                    <div class="lang-bar-mini"><span style="width: 45%"></span></div>
-                </div>
-                <div class="lang-card">
-                    <div class="lang-icon-wrapper">
-                        <i class="fa-solid fa-book-open lang-icon"></i>
-                    </div>
-                    <span class="lang-name">Reading</span>
-                    <span class="lang-percentage">55%</span>
-                    <div class="lang-bar-mini"><span style="width: 55%"></span></div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Kamalesh E. Crafted with code and Coffee.</p>
+            <p>&copy; 2026 Kamalesh E. Presentation Deck Mode.</p>
         </div>
     </footer>
 
