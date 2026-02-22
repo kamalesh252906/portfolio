@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamalesh E - About</title>
+    <title>Kamalesh E - Journey Timeline</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Devicon for Tech Logos -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -20,11 +18,10 @@
     <div class="cursor-glow"></div>
 
     <header id="header">
-        <a href="home.html" class="logo">KAMALESH<span> ELUMALAI</span></a>
+        <a href="index.html" class="logo">KAMALESH<span> ELUMALAI</span></a>
         <nav>
-            <a href="home.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html" class="active-nav">About</a>
-
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -40,18 +37,11 @@
             <!-- Global Navigation Overlay -->
             <div class="deck-nav">
                 <div class="nav-brand">KAMALESH // <span>IDENTITY</span></div>
-                <div class="deck-dots">
-                    <span class="active" data-index="0"></span>
-                    <span data-index="1"></span>
-                    <span data-index="2"></span>
-                    <span data-index="3"></span>
-                    <span data-index="4"></span>
-                </div>
             </div>
 
             <div class="slides-container">
-                <!-- SLIDE 1: THE ORIGIN (THE START) -->
-                <section class="slide journey-node active" data-year="NATIVE">
+                <!-- SLIDE 1: THE ORIGIN -->
+                <section class="slide active" id="slide-1">
                     <div class="slide-layout">
                         <div class="collage-zone">
                             <div class="timeline-marker">START</div>
@@ -64,84 +54,84 @@
                             <span class="milestone-label">PHASE 01: ROOTS</span>
                             <h1 class="slide-title">Where the <br><span>Journey Began</span></h1>
                             <div class="detailed-text">
-                                <p>Born and raised in the vibrant coastal city of <b>Chennai</b>, my story began in an environment filled with energy and aspiration. Being a native of this city shaped my resilient mindset and early interest in technology.</p>
-                                <p>This is the foundation of my identity—a blend of Chennai's rich culture and a futuristic outlook on software development.</p>
+                                <p>Born and raised in <b>Chennai</b>, my story began in a city of dreams and tech ambition. This native background shaped my identity and early interest in building digital solutions.</p>
+                                <p>I am a detail-oriented developer passionate about crafting logical systems and creative user experiences.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 2: SCHOOLING (THE FOUNDATION) -->
-                <section class="slide journey-node" data-year="2018-2020">
+                <!-- SLIDE 2: SCHOOLING -->
+                <section class="slide" id="slide-2">
                     <div class="slide-layout reverse">
                         <div class="collage-zone">
+                            <div class="timeline-marker">FOUNDATION</div>
                             <div class="mosaic-main small">
                                 <img src="images/govt.webp" alt="School">
                             </div>
-                            <div class="timeline-marker">FOUNDATION</div>
                         </div>
                         <div class="content-zone">
                             <span class="milestone-label">PHASE 02: SCHOOLING</span>
                             <h2 class="slide-title">GHSS <span>Velachery</span></h2>
                             <div class="detailed-text">
-                                <p>My academic foundation was laid at <b>GHSS Velachery</b>. Here, I developed the discipline and curiosity that would later drive my technical career.</p>
-                                <p>During these early years, I discovered my affinity for logical thinking and problem-solving, setting the stage for my engineering path.</p>
+                                <p>My academic foundation was built at <b>GHSS Velachery</b>. Here, I developed the discipline and curiosity that would later define my career in engineering.</p>
+                                <p>It was during these years that I discovered my love for problem-solving and structured learning.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 3: COLLEGE (THE EXCELLENCE) -->
-                <section class="slide journey-node" data-year="2020-2023">
+                <!-- SLIDE 3: COLLEGE -->
+                <section class="slide" id="slide-3">
                     <div class="slide-layout">
                         <div class="collage-zone">
+                            <div class="timeline-marker">EXCELLENCE</div>
                             <div class="mosaic-main">
-                                <img src="images/cpt.photo.avif" alt="CPC">
+                                <img src="images/cpt.photo.avif" alt="College">
                             </div>
                             <div class="floating-score">93%</div>
-                            <div class="timeline-marker">EXCELLENCE</div>
                         </div>
                         <div class="content-zone">
-                            <span class="milestone-label">PHASE 03: HIGHER EDUCATION</span>
+                            <span class="milestone-label">PHASE 03: ACADEMICS</span>
                             <h2 class="slide-title">Central <span>Polytechnic</span></h2>
                             <div class="detailed-text">
-                                <p>I pursued my Diploma in <b>Computer Engineering</b> at Central Polytechnic College. This was a pivotal time where I mastered core computer science principles.</p>
-                                <p>Graduating with a remarkable <b>93% overall score</b>, I proved my ability to tackle complex technical challenges and excel in a rigorous engineering environment.</p>
+                                <p>I pursued a Diploma in <b>Computer Engineering</b> at Central Polytechnic College, where I excelled with an overall score of <b>93%</b>.</p>
+                                <p>This achievement represents my dedication to mastering technical fundamentals and thriving in high-stakes engineering environments.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 4: FAMILY (THE SUPPORT) -->
-                <section class="slide journey-node" data-year="SUPPORT">
+                <!-- SLIDE 4: FAMILY -->
+                <section class="slide" id="slide-4">
                     <div class="slide-layout centered">
                         <div class="content-zone glass-box timeline-center">
                             <div class="timeline-marker top">STRENGTH</div>
                             <span class="milestone-label">THE PILLAR</span>
                             <h2 class="slide-title">Family <span>Background</span></h2>
                             <div class="detailed-text">
-                                <p>Throughout my timeline, my family has been the constant source of motivation. Their background in values and integrity has been the bedrock of my growth.</p>
-                                <p>Every academic and professional milestone I've reached is a reflection of the support and belief they invested in me.</p>
+                                <p>Throughout my journey, my family has been the bedrock of my resilience. Coming from a background that values hard work and integrity, I carry these values into every project I build.</p>
+                                <p>Their unwavering belief in my potential has been the driving force behind my academic and professional success.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 5: FSSA (THE FUTURE) -->
-                <section class="slide journey-node" data-year="PRESENT">
+                <!-- SLIDE 5: FSSA -->
+                <section class="slide" id="slide-5">
                     <div class="slide-layout">
-                        <div class="collage-zone journey-stack">
+                        <div class="collage-zone">
+                            <div class="timeline-marker end">FLIGHT</div>
                             <div class="mosaic-main">
                                 <img src="images/freshworks.jpg" alt="FSSA">
                             </div>
-                            <div class="timeline-marker end">FLIGHT</div>
                         </div>
                         <div class="content-zone">
-                            <span class="milestone-label">PHASE 05: FSSA ACADEMY</span>
+                            <span class="milestone-label">PHASE 05: FSSA JOURNEY</span>
                             <h2 class="slide-title">Freshworks <span>STS</span></h2>
                             <div class="detailed-text">
-                                <p>Today, I am at <b>Freshworks STS Software Academy (FSSA)</b>, transforming from an engineering student into a production-ready developer.</p>
-                                <p>This current phase is about mastering **Python, FastAPI, and PostgreSQL**, while refining professional ethics and technical communication for the global stage.</p>
+                                <p>Currently at <b>Freshworks STS Software Academy</b>, I am honing my expertise in <b>Python, FastAPI, and PostgreSQL</b>. This journey is about professional transformation.</p>
+                                <p>Mastering complex backend architectures while refining professional communication and workplace ethics for a global career.</p>
                             </div>
                         </div>
                     </div>
@@ -167,12 +157,11 @@
                 <button class="slide-btn next"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
-        </div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Kamalesh E. Presentation Deck Mode.</p>
+            <p>&copy; 2026 Kamalesh E. Journey Timeline Mode.</p>
         </div>
     </footer>
 

@@ -332,3 +332,159 @@ footer {
     padding: 5rem 5%;
   }
 }
+
+/* Core Skills Styles */
+.core-skills {
+  padding: 8rem 10% 4rem;
+}
+
+.skills-section-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.skills-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+
+.skill-item {
+  margin-bottom: 3rem;
+  background: rgba(17, 24, 39, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition-fast);
+}
+
+.skill-item:hover {
+  border-color: var(--accent-main);
+  transform: translateX(10px);
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.skill-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+}
+
+.progress-line {
+  height: 10px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-line span {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--accent-gradient);
+  border-radius: 20px;
+  box-shadow: 0 0 15px var(--accent-glow);
+  display: block;
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+}
+
+/* English Skills Styles */
+.languages {
+  padding: 6rem 10% 8rem;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.lang-card {
+  background: var(--bg-card);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-card:hover {
+  transform: translateY(-15px);
+  border-color: var(--accent-main);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.lang-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: rgba(250, 204, 21, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  transition: 0.3s;
+}
+
+.lang-card:hover .lang-icon-wrapper {
+  background: var(--accent-main);
+}
+
+.lang-card:hover .lang-icon {
+  color: var(--bg-primary);
+}
+
+.lang-icon {
+  font-size: 1.8rem;
+  color: var(--accent-main);
+  transition: 0.3s;
+}
+
+.lang-name {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.lang-percentage {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent-main);
+  margin-bottom: 1.5rem;
+}
+
+/* Specific Progress line adjustment for cards */
+.lang-card .progress-line {
+  height: 6px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .skills-two-column {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
