@@ -226,6 +226,129 @@
     margin-bottom: 2rem;
 }
 
+/* Timeline Deck Styles */
+.timeline-path {
+    position: fixed;
+    bottom: 120px;
+    left: 10%;
+    right: 10%;
+    z-index: 100;
+}
+
+.timeline-line {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 10px;
+}
+
+.timeline-progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--accent-main);
+    width: 0%;
+    transition: width 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.timeline-nodes {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -6px;
+    width: 100%;
+}
+
+.node-item {
+    width: 14px;
+    height: 14px;
+    background: #1a1a1a;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.node-item span {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.node-item.active {
+    background: var(--accent-main);
+    border-color: var(--accent-main);
+    box-shadow: 0 0 10px var(--accent-glow);
+    transform: scale(1.2);
+}
+
+.node-item.active span {
+    color: var(--accent-main);
+}
+
+.milestone-label {
+    display: block;
+    color: var(--accent-main);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Timeline Markers on Collage */
+.timeline-marker {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background: #fff;
+    color: #000;
+    font-weight: 900;
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+.timeline-marker.end {
+    background: var(--accent-main);
+}
+
+.floating-score {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(250, 204, 21, 0.1);
+    font-family: 'Space Grotesk', sans-serif;
+    z-index: 1;
+}
+
+.mosaic-main.small {
+    width: 350px;
+    height: 450px;
+}
+
+.timeline-center {
+    border-left: 1px solid var(--accent-main);
+    padding-left: 3rem !important;
+    text-align: left !important;
+}
+
 /* Navigation Overlays */
 .deck-nav {
     position: fixed;

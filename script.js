@@ -126,9 +126,10 @@ if (menuBtn) {
     });
 }
 
-// Cinematic Presentation Logic
+// Cinematic Timeline Logic
 const slides = document.querySelectorAll(".slide");
-const navDots = document.querySelectorAll(".deck-dots span");
+const navDots = document.querySelectorAll(".node-item"); // Changed to timeline nodes
+const progressBar = document.querySelector(".timeline-progress-bar");
 const prevSlideBtn = document.querySelector(".slide-btn.prev");
 const nextSlideBtn = document.querySelector(".slide-btn.next");
 let activeSlideIndex = 0;
@@ -145,9 +146,15 @@ function showSlide(index) {
     navDots[index].classList.add("active");
     activeSlideIndex = index;
 
+    // Update Progress Bar
+    if (progressBar) {
+        const progress = (index / (slides.length - 1)) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
     // Update Brand Text based on slide
     const brandText = document.querySelector(".nav-brand span");
-    const categories = ["IDENTITY", "ROOTS", "ACADEMICS", "FOUNDATION", "EVOLUTION"];
+    const categories = ["IDENTITY", "FOUNDATION", "ACADEMICS", "STRENGTH", "EVOLUTION"];
     if (brandText) brandText.textContent = categories[index];
 }
 
@@ -181,7 +188,7 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prevSlideBtn?.click();
 });
 
-// Auto-init first slide with slight delay for impact
+// Auto-init
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => showSlide(0), 100);
 });
