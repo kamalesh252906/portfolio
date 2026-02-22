@@ -126,65 +126,64 @@ if (menuBtn) {
     });
 }
 
-// Presentation Deck Logic
-const deckWrapper = document.querySelector(".deck-wrapper");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const currentNum = document.querySelector(".current-num");
-const progressFill = document.querySelector(".progress-fill");
+// Cinematic Presentation Logic
+const slides = document.querySelectorAll(".slide");
+const navDots = document.querySelectorAll(".deck-dots span");
+const prevSlideBtn = document.querySelector(".slide-btn.prev");
+const nextSlideBtn = document.querySelector(".slide-btn.next");
+let activeSlideIndex = 0;
 
-let currentSlide = 0;
-const totalSlides = 7;
+function showSlide(index) {
+    if (index < 0 || index >= slides.length) return;
 
-function updateDeck() {
-    if (!deckWrapper) return;
+    // Remove active state from all
+    slides.forEach(s => s.classList.remove("active"));
+    navDots.forEach(d => d.classList.remove("active"));
 
-    // Move deck
-    deckWrapper.style.transform = `translateX(-${currentSlide * 100}vw)`;
+    // Set new active state
+    slides[index].classList.add("active");
+    navDots[index].classList.add("active");
+    activeSlideIndex = index;
 
-    // Update numbers & progress
-    if (currentNum) currentNum.textContent = `0${currentSlide + 1}`;
-    if (progressFill) progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
-
-    // Button states
-    if (prevBtn) prevBtn.disabled = currentSlide === 0;
-    if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
-
-    // Trigger reveal animations for content in new slide
-    const activeSlide = document.getElementById(`slide-${currentSlide + 1}`);
-    if (activeSlide) {
-        activeSlide.classList.add("active");
-    }
+    // Update Brand Text based on slide
+    const brandText = document.querySelector(".nav-brand span");
+    const categories = ["IDENTITY", "ROOTS", "ACADEMICS", "FOUNDATION", "EVOLUTION"];
+    if (brandText) brandText.textContent = categories[index];
 }
 
-if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-        if (currentSlide < totalSlides - 1) {
-            currentSlide++;
-            updateDeck();
+if (nextSlideBtn) {
+    nextSlideBtn.addEventListener("click", () => {
+        if (activeSlideIndex < slides.length - 1) {
+            showSlide(activeSlideIndex + 1);
+        } else {
+            showSlide(0); // Loop back
         }
     });
 }
 
-if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateDeck();
+if (prevSlideBtn) {
+    prevSlideBtn.addEventListener("click", () => {
+        if (activeSlideIndex > 0) {
+            showSlide(activeSlideIndex - 1);
+        } else {
+            showSlide(slides.length - 1); // Loop back
         }
     });
 }
 
-// Support Arrow Keys
-document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") nextBtn?.click();
-    if (e.key === "ArrowLeft") prevBtn?.click();
+navDots.forEach((dot, i) => {
+    dot.addEventListener("click", () => showSlide(i));
 });
 
-// Initialize Deck
+// Keyboard Support
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") nextSlideBtn?.click();
+    if (e.key === "ArrowLeft") prevSlideBtn?.click();
+});
+
+// Auto-init first slide with slight delay for impact
 document.addEventListener("DOMContentLoaded", () => {
-    updateDeck();
-    // ... existing init code ...
+    setTimeout(() => showSlide(0), 100);
 });
 
 /* Intro Overlay Interaction */

@@ -35,196 +35,137 @@
     </header>
 
     <main>
-        <!-- PRESENTATION DECK -->
-        <div class="deck-container">
-            <!-- Slide Navigation Controls -->
-            <div class="deck-controls">
-                <button class="control-btn prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                <div class="deck-progress">
-                    <span class="current-num">01</span>
-                    <div class="progress-bar-wrap"><div class="progress-fill"></div></div>
-                    <span class="total-num">07</span>
+        <!-- CINEMATIC PRESENTATION DECK -->
+        <div class="presentation-deck">
+            <!-- Global Navigation Overlay -->
+            <div class="deck-nav">
+                <div class="nav-brand">KAMALESH // <span>IDENTITY</span></div>
+                <div class="deck-dots">
+                    <span class="active" data-index="0"></span>
+                    <span data-index="1"></span>
+                    <span data-index="2"></span>
+                    <span data-index="3"></span>
+                    <span data-index="4"></span>
                 </div>
-                <button class="control-btn next-btn"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
 
-            <div class="deck-wrapper">
-                <!-- SLIDE 1: IDENTITY & ORIGIN -->
-                <section class="deck-slide" id="slide-1">
-                    <div class="slide-inner">
-                        <div class="collage-layer">
-                            <div class="collage-item main-portrait">
-                                <img src="images/kamalesh.jpg.jpg" alt="Kamalesh">
+            <div class="slides-container">
+                <!-- SLIDE 1: THE INTRODUCTION -->
+                <section class="slide identity-slide active">
+                    <div class="slide-layout">
+                        <div class="collage-zone">
+                            <div class="mosaic-main">
+                                <img src="images/kamalesh.jpg.jpg" alt="Kamalesh Profile">
                             </div>
-                            <div class="collage-item city-tag">
-                                <i class="fa-solid fa-map-pin"></i>
-                                <span>Chennai, TN</span>
-                            </div>
-                            <div class="collage-item floating-shape-1"></div>
+                            <div class="floating-tag name-tag">ELUMALAI</div>
+                            <div class="mosaic-sub sub-1"></div>
                         </div>
-                        <div class="text-layer">
-                            <h1 class="hero-name">Kamalesh<span> Elumalai</span></h1>
-                            <p class="hero-sub">From the vibrant streets of <b>Chennai</b> to the world of <b>Backend Engineering</b>.</p>
-                            <div class="slide-indicators">
-                                <span>Native</span>
-                                <span>Developer</span>
+                        <div class="content-zone">
+                            <span class="category-header">01 // The Architect</span>
+                            <h1 class="slide-title">Hii, I'm <br><span>Kamalesh E</span></h1>
+                            <div class="detailed-text">
+                                <p>I am a highly motivated <b>Software Developer</b> with a deep-rooted passion for backend architecture and system design. My journey is defined by a relentless pursuit of engineering excellence and a commitment to building scalable, real-world solutions.</p>
+                                <p>Currently, I am shaping my expertise in modern technologies, blending <b>logic-driven engineering</b> with <b>creative problem-solving</b> to bridge the gap between complex data and user-friendly applications.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 2: EDUCATION -->
-                <section class="deck-slide" id="slide-2">
-                    <div class="slide-inner split">
-                        <div class="text-layer">
-                            <span class="slide-category">Education</span>
-                            <h2 class="slide-heading">The <span>Academic</span> Blueprint</h2>
-                            <p class="slide-text">Building a strong logical foundation through engineering excellence.</p>
-                            
-                            <div class="edu-path">
-                                <div class="edu-node">
-                                    <div class="node-circle"></div>
-                                    <div class="node-info">
-                                        <h4>Secondary Education</h4>
-                                        <p>GHSS Velachery</p>
-                                    </div>
-                                </div>
-                                <div class="edu-node destacado">
-                                    <div class="node-circle"></div>
-                                    <div class="node-info">
-                                        <h4>Computer Engineering</h4>
-                                        <p>Central Polytechnic College</p>
-                                        <span class="score-tag">93% Grade</span>
-                                    </div>
-                                </div>
+                <!-- SLIDE 2: MY NATIVE (CHENNAI) -->
+                <section class="slide native-slide">
+                    <div class="slide-layout reverse">
+                        <div class="collage-zone">
+                            <div class="mosaic-bg">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div class="location-card">
+                                <h3>CHENNAI</h3>
+                                <p>Tamil Nadu, India</p>
                             </div>
                         </div>
-                        <div class="collage-layer grid-collage">
-                            <div class="collage-item photo-stack-1">
-                                <img src="images/cpt.photo.avif" alt="College">
-                            </div>
-                            <div class="collage-item photo-stack-2">
-                                <img src="images/govt.webp" alt="School">
+                        <div class="content-zone">
+                            <span class="category-header">02 // Roots</span>
+                            <h2 class="slide-title">Where I <span>Come From</span></h2>
+                            <div class="detailed-text">
+                                <p>Born and raised in the vibrant, tech-centric city of <b>Chennai</b>, I have always been surrounded by an atmosphere of innovation and growth. Being a native of this coastal metropolis has instilled in me a spirit of resilience and a fast-paced approach to life.</p>
+                                <p>The culture of Chennai—a perfect blend of tradition and modernity—reflects in my work ethic. I carry the energy of Namma Chennai into every project, ensuring that my solutions are as robust as the city itself.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 3: BACKGROUND & FAMILY -->
-                <section class="deck-slide" id="slide-3">
-                    <div class="slide-inner centered">
-                        <div class="abstract-collage">
-                            <div class="root-circle">
-                                <i class="fa-solid fa-hands-holding-child"></i>
+                <!-- SLIDE 3: ACADEMICS -->
+                <section class="slide education-slide">
+                    <div class="slide-layout">
+                        <div class="collage-zone mosaic-grid">
+                            <div class="mosaic-photo edu-p1">
+                                <img src="images/cpt.photo.avif" alt="CPC College">
+                                <span class="badge">Diploma in CE</span>
                             </div>
-                            <div class="orbit-item item-1"><i class="fa-solid fa-house"></i></div>
-                            <div class="orbit-item item-2"><i class="fa-solid fa-heart"></i></div>
-                            <div class="orbit-item item-3"><i class="fa-solid fa-shield"></i></div>
+                            <div class="mosaic-photo edu-p2">
+                                <img src="images/govt.webp" alt="GHSS School">
+                                <span class="badge">GHSS</span>
+                            </div>
+                            <div class="score-burst">93%</div>
                         </div>
-                        <div class="text-layer">
-                            <span class="slide-category">Roots</span>
-                            <h2 class="slide-heading">Family & <span>Values</span></h2>
-                            <p class="slide-text max-centered">Coming from a background that prioritizes resilience and growth. My family is the driving force behind my technical ambitions.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SLIDE 4: FSSA JOURNEY -->
-                <section class="deck-slide" id="slide-4">
-                    <div class="slide-inner">
-                        <div class="text-layer layer-full">
-                            <span class="slide-category">The Transformation</span>
-                            <h2 class="slide-heading">Freshworks <span>STS Academy</span></h2>
-                            
-                            <div class="journey-grid">
-                                <div class="journey-desc">
-                                    <p>An intensive journey at <b>FSSA</b>, mastering modern backend technologies while cultivating professional workplace ethics and life skills.</p>
-                                    <div class="skill-chips">
-                                        <span>Python</span>
-                                        <span>PostgreSQL</span>
-                                        <span>FastAPI</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                </div>
-                                <div class="journey-collage">
-                                    <div class="collage-item img-academy">
-                                        <img src="images/freshworks.jpg" alt="Academy">
-                                    </div>
-                                    <div class="collage-item img-study">
-                                        <img src="images/workplace study.jpg" alt="Learning">
-                                    </div>
-                                </div>
+                        <div class="content-zone">
+                            <span class="category-header">03 // Academics</span>
+                            <h2 class="slide-title">My <span>Educational</span> Path</h2>
+                            <div class="detailed-text">
+                                <p>My academic foundation was laid at <b>GHSS Velachery</b>, where I completed my secondary education with a focus on core subjects. This early phase ignited my curiosity for how computers function and how systems are built.</p>
+                                <p>I later transitioned to <b>Central Polytechnic College</b> to pursue a Diploma in <b>Computer Engineering</b>. I graduated with an outstanding score of <b>93% Overall</b>, a testament to my dedication to mastering the complex logic and structural patterns of modern-day computing.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 5: MILESTONES -->
-                <section class="deck-slide" id="slide-5">
-                    <div class="slide-inner split-alt">
-                        <div class="collage-layer trophy-collage">
-                            <div class="floating-trophy">
-                                <i class="fa-solid fa-award"></i>
+                <!-- SLIDE 4: THE FAMILY -->
+                <section class="slide family-slide">
+                    <div class="slide-layout centered">
+                        <div class="content-zone glass-box">
+                            <div class="abstract-collage-icon">
+                                <i class="fa-solid fa-house-user"></i>
                             </div>
-                            <div class="stat-card">
-                                <h3>93%</h3>
-                                <p>Academic Rank</p>
+                            <span class="category-header">04 // Foundation</span>
+                            <h2 class="slide-title">Family <span>Background</span></h2>
+                            <div class="detailed-text">
+                                <p>Behind every achievement of mine is a <b>supportive and encouraging family</b>. Coming from a background that values education and integrity, my family has been the cornerstone of my professional aspirations.</p>
+                                <p>Their unwavering belief in my potential has provided me with the stability and motivation needed to navigate the challenges of the software industry. They taught me that growth is a continuous journey, and character is the real measure of success.</p>
                             </div>
                         </div>
-                        <div class="text-layer">
-                            <span class="slide-category">Milestones</span>
-                            <h2 class="slide-heading">Key <span>Achievements</span></h2>
-                            <ul class="achievement-bullets">
-                                <li>Top Graduate in Computer Engineering</li>
-                                <li>Transitioned to Full-Stack Backend Specialist</li>
-                                <li>Mastered Real-world API Architectures</li>
-                                <li>Fluent in Technical Team Communications</li>
-                            </ul>
+                    </div>
+                </section>
+
+                <!-- SLIDE 5: THE FSSA JOURNEY -->
+                <section class="slide fssa-slide">
+                    <div class="slide-layout">
+                        <div class="collage-zone journey-stack">
+                            <div class="journey-card-display">
+                                <img src="images/freshworks.jpg" alt="FSSA Environment">
+                            </div>
+                            <div class="tech-overlap">
+                                <span>FASTAPI</span>
+                                <span>PYTHON</span>
+                                <span>POSTGRESQL</span>
+                            </div>
+                        </div>
+                        <div class="content-zone">
+                            <span class="category-header">05 // The Academy</span>
+                            <h2 class="slide-title">The <span>FSSA</span> Evolution</h2>
+                            <div class="detailed-text">
+                                <p>My time at <b>Freshworks STS Software Academy (FSSA)</b> has been a massive transformative chapter. It's where I bridged the gap between theory and industry-standard development.</p>
+                                <p><b>Technical Mastery:</b> I've mastered the stack of Python, FastAPI, and PostgreSQL, learning how to architect high-performance backends.</p>
+                                <p><b>Life Skills:</b> Beyond code, I've honed workplace ethics, effective English communication, and the art of professional collaboration. I've learned time management and teamwork—skills that are essential for any world-class developer.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
-        </div>
 
-                <!-- SLIDE 6: TECHNICAL SKILLS -->
-                <section class="deck-slide" id="slide-6">
-                    <div class="slide-inner centered">
-                        <div class="text-layer">
-                            <span class="slide-category">Expertise</span>
-                            <h2 class="slide-heading">Core <span>Skills</span></h2>
-                        </div>
-                        <div class="skills-grid-presentation">
-                            <div class="skill-pill"><i class="devicon-python-plain colored"></i> Python</div>
-                            <div class="skill-pill"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
-                            <div class="skill-pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
-                            <div class="skill-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-                            <div class="skill-pill"><i class="devicon-html5-plain colored"></i> HTML5</div>
-                            <div class="skill-pill"><i class="devicon-css3-plain colored"></i> CSS3</div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SLIDE 7: LANGUAGES -->
-                <section class="deck-slide" id="slide-7">
-                    <div class="slide-inner centered">
-                         <div class="text-layer">
-                            <span class="slide-category">Communication</span>
-                            <h2 class="slide-heading">Language <span>Proficiency</span></h2>
-                        </div>
-                        <div class="lang-collage">
-                            <div class="lang-box">
-                                <h4>English</h4>
-                                <div class="lang-meter"><div class="meter-fill" style="width: 75%"></div></div>
-                                <span>Advanced Proficiency</span>
-                            </div>
-                            <div class="lang-box">
-                                <h4>Tamil</h4>
-                                <div class="lang-meter"><div class="meter-fill" style="width: 100%"></div></div>
-                                <span>Native Speaker</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <!-- Slide Navigation Buttons -->
+            <div class="deck-controls-v2">
+                <button class="slide-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slide-btn next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
     </main>
