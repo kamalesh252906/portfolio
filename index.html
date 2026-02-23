@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kmalesh E - Portfolio</title>
+    <title>Kamalesh - Portfolio</title>
     <!-- Combined Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="about.css">
+
 
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="contact.css">
@@ -48,7 +48,7 @@
         <a href="#home" class="logo">KAMALESH<span> ELUMALAI</span></a>
         <nav>
             <a href="#home" class="active-nav">Home</a>
-            <a href="about.html">About</a>
+            <a href="#about">About</a>
 
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -117,21 +117,105 @@ I am learning Full-Stack Development and enjoy building useful and impactful app
         <section class="about" id="about">
             <div class="section-header reveal">
                 <h2 class="section-title">About <span>Me</span></h2>
-                <!-- <p class="section-subtitle">A motivated Software Developer with a strong foundation in computer engineering.</p> -->
+                <p class="section-subtitle">A professional chronicle of my journey and growth</p>
             </div>
-            <div class="about-text reveal">
-                <p style="margin-bottom: 1rem;">
-                    Hi, I’m Kamalesh from Chennai. I completed my secondary education at GHSS Velachery. After that, I studied <span class="highlight-text">Computer Engineering</span> at Central Polytechnic College, where I secured <span class="highlight-text">93% overall</span>.
-                </p>
-                <p style="margin-bottom: 1rem;">
-                    Currently, I am a student at Freshworks STS Software Academy. Here, I am learning both technical skills and life skills. My technical learning includes <span class="skill-highlight">HTML, CSS, JavaScript, Python, PostgreSQL, and FastAPI</span>. Along with this, I am improving my problem-solving skills and English communication.
-                </p>
-                <p style="margin-bottom: 1rem;">
-                    In life skills training, I have learnt <span class="highlight-text">time management</span>, <span class="highlight-text">teamwork</span>, and how to work professionally with people of different genders in a workplace environment.
-                </p>
-                <p>
-                    My goal is to become a <span class="highlight-text">Backend Developer</span>, and I am continuously working to improve my skills and build real-world applications.
-                </p>
+            
+            <div class="about-timeline-collage reveal">
+                <!-- Image Grid Side -->
+                <div class="collage-grid-side">
+                    <div class="milestone-grid">
+                        <div class="milestone-item school">
+                            <img src="images/govt.webp" alt="Government School">
+                            <div class="milestone-info">
+                                <span>SCHOOL</span>
+                            </div>
+                        </div>
+                        <div class="milestone-item college">
+                            <img src="images/cpt.photo.avif" alt="Central Polytechnic College">
+                            <div class="milestone-info">
+                                <span>COLLEGE</span>
+                            </div>
+                        </div>
+                        <div class="milestone-item intern">
+                            <img src="/images/bsnl_logo.jpg" alt="BSNL INTERN">
+                            <div class="milestone-info">
+                                <span>BSNL INTERN</span>
+                            </div>
+                        </div>
+                        <div class="milestone-item fssa">
+                            <img src="/images/freshworks1.jpg" alt="Freshworks Academy">
+                            <div class="milestone-info">
+                                <span>FSSA ACADEMY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biography side -->
+                <div class="bio-narrative-side">
+                    <div class="bio-header">
+                        <h3>Kamalesh Elumalai</h3>
+                        <p>Full Stack Developer <span>& Problem Solver</span></p>
+                    </div>
+
+                    <div class="bio-body">
+                        <p>My name is <b>Kamalesh</b>, and I am an aspiring <span class="highlight-text">Full Stack Developer</span> from Chennai. My professional path began with a Diploma in Computer Engineering at <b>Central Polytechnic College</b> and is currently being polished at <b>Freshworks STS Software Academy</b>. Coming from a humble background—inspired by my father’s dedication to his flower business and my mother’s support—I have cultivated a <span class="highlight-text">strong work ethic and resilience</span> that drives me to stay determined in achieving my professional goals.</p>
+
+                        <p>In terms of technical expertise, I am proficient in <b>HTML, CSS, JavaScript, PostgreSQL, FastAPI, and Python</b>. My journey includes building responsive static websites and transitioning into complex <span class="highlight-text">full-stack web applications</span>. These projects have given me hands-on experience in integrating robust backend logic with seamless user interfaces, ensuring that every digital solution I build is both efficient and scalable.</p>
+
+                        <p>My time at the academy has been a period of significant growth, where I evolved from being nervous about English communication to receiving a <span class="highlight-text">Special Mention for my presentation skills</span>. This personal transformation, combined with my experience in <b>three squad-based projects</b>, has refined my leadership and collaboration abilities. I am now dedicated to becoming a top-tier web developer with <span class="highlight-text">deep backend expertise</span> and a commitment to continuous learning.</p>
+                    </div>
+
+                    <div class="bio-footer-stats">
+                        <div class="bio-stat">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>Full Stack Ready</span>
+                        </div>
+                        <div class="bio-stat">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Presentation Awardee</span>
+                        </div>
+                        <div class="bio-stat">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Squad Lead Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-certificates reveal" style="margin-top: 6rem;">
+                <h3 class="subsection-title" style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Verified <span>Credentials</span></h3>
+                <div class="certs-grid">
+                    <!-- BSNL Certificate -->
+                    <div class="cert-card-medium">
+                        <div class="cert-img-medium">
+                            <img src="images/BSNL_Intern_Certificate.jpeg" alt="BSNL Internship Certificate">
+                            <div class="cert-medium-overlay">
+                                <a href="images/BSNL_Intern_Certificate.jpeg" target="_blank" class="cert-btn-small"><i class="fas fa-expand"></i></a>
+                            </div>
+                        </div>
+                        <div class="cert-info-medium">
+                            <span class="cert-tag">Internship</span>
+                            <h4>BSNL Internship</h4>
+                            <p>Professional training in telecommunications and network operations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Diploma Certificate -->
+                    <div class="cert-card-medium">
+                        <div class="cert-img-medium">
+                            <img src="images/Diploma_degree_certificate.jpeg" alt="Diploma Certificate">
+                            <div class="cert-medium-overlay">
+                                <a href="images/Diploma_degree_certificate.jpeg" target="_blank" class="cert-btn-small"><i class="fas fa-expand"></i></a>
+                            </div>
+                        </div>
+                        <div class="cert-info-medium">
+                            <span class="cert-tag">Academic</span>
+                            <h4>Diploma in CSE</h4>
+                            <p>State Board certification for Computer Science and Engineering.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -384,7 +468,7 @@ I am learning Full-Stack Development and enjoy building useful and impactful app
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Kamalesh E. Crafted with code and Coffee.</p>
+            <p>&copy; 2026 Kamalesh. Crafted with code and Coffee.</p>
             <div class="footer-links">
                 <a href="#home">Back to top ↑</a>
             </div>

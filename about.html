@@ -3,168 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamalesh E - Journey Timeline</title>
+    <title>Kamalesh E | Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about-dashboard.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="bg-glow"></div>
-    <div class="cursor-glow"></div>
 
     <header id="header">
-        <a href="index.html" class="logo">KAMALESH<span> ELUMALAI</span></a>
+        <a href="index.html" class="logo">KAMALESH<span>.DEV</span></a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html" class="active-nav">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html" class="active-nav">Profile</a>
+            <a href="projects.html">Works</a>
+            <a href="contact.html">Connect</a>
         </nav>
-        <div class="menu-btn">
-            <span></span>
-            <span></span>
-        </div>
+        <div class="menu-btn"><span></span><span></span></div>
     </header>
 
-    <main>
-        <!-- CINEMATIC PRESENTATION DECK -->
-        <div class="presentation-deck">
-            <!-- Global Navigation Overlay -->
-            <div class="deck-nav">
-                <div class="nav-brand">KAMALESH // <span>IDENTITY</span></div>
+    <main class="dashboard-wrapper">
+        <!-- 1. IDENTITY CARD -->
+        <div class="dash-box dash-identity dash-reveal">
+            <span class="box-label">User ID: 252906</span>
+            <div class="id-portrait">
+                <img src="images/kamalesh.jpg.jpg" alt="Kamalesh">
             </div>
+            <h2>Kamalesh E</h2>
+            <span class="status">FULL STACK DEVELOPER // ASPIRING</span>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--dash-text);">Chennai, India</p>
+        </div>
 
-            <div class="slides-container">
-                <!-- SLIDE 1: THE ORIGIN -->
-                <section class="slide active" id="slide-1">
-                    <div class="slide-layout">
-                        <div class="collage-zone">
-                            <div class="timeline-marker">START</div>
-                            <div class="mosaic-main">
-                                <img src="images/kamalesh.jpg.jpg" alt="Kamalesh">
-                            </div>
-                            <div class="floating-tag location-tag">CHENNAI, TN</div>
-                        </div>
-                        <div class="content-zone">
-                            <span class="milestone-label">PHASE 01: ROOTS</span>
-                            <h1 class="slide-title">Where the <br><span>Journey Began</span></h1>
-                            <div class="detailed-text">
-                                <p>Born and raised in <b>Chennai</b>, my story began in a city of dreams and tech ambition. This native background shaped my identity and early interest in building digital solutions.</p>
-                                <p>I am a detail-oriented developer passionate about crafting logical systems and creative user experiences.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <!-- 2. CORE BIO -->
+        <div class="dash-box dash-bio dash-reveal">
+            <span class="box-label">Core Biography</span>
+            <h3><i class="fa-solid fa-user-gear"></i> Profile Summary</h3>
+            <p>I am a developer who believes in the power of code to transform humble beginnings into high-tech solutions. From <b>Central Polytechnic College</b> to <b>Freshworks Academy</b>, my focus is technical excellence.</p>
+            <p>Mastering <b>Python, FastAPI, and PostgreSQL</b> while refining the mindset required for global software engineering.</p>
+        </div>
 
-                <!-- SLIDE 2: SCHOOLING -->
-                <section class="slide" id="slide-2">
-                    <div class="slide-layout reverse">
-                        <div class="collage-zone">
-                            <div class="timeline-marker">FOUNDATION</div>
-                            <div class="mosaic-main small">
-                                <img src="images/govt.webp" alt="School">
-                            </div>
-                        </div>
-                        <div class="content-zone">
-                            <span class="milestone-label">PHASE 02: SCHOOLING</span>
-                            <h2 class="slide-title">GHSS <span>Velachery</span></h2>
-                            <div class="detailed-text">
-                                <p>My academic foundation was built at <b>GHSS Velachery</b>. Here, I developed the discipline and curiosity that would later define my career in engineering.</p>
-                                <p>It was during these years that I discovered my love for problem-solving and structured learning.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SLIDE 3: COLLEGE -->
-                <section class="slide" id="slide-3">
-                    <div class="slide-layout">
-                        <div class="collage-zone">
-                            <div class="timeline-marker">EXCELLENCE</div>
-                            <div class="mosaic-main">
-                                <img src="images/cpt.photo.avif" alt="College">
-                            </div>
-                            <div class="floating-score">93%</div>
-                        </div>
-                        <div class="content-zone">
-                            <span class="milestone-label">PHASE 03: ACADEMICS</span>
-                            <h2 class="slide-title">Central <span>Polytechnic</span></h2>
-                            <div class="detailed-text">
-                                <p>I pursued a Diploma in <b>Computer Engineering</b> at Central Polytechnic College, where I excelled with an overall score of <b>93%</b>.</p>
-                                <p>This achievement represents my dedication to mastering technical fundamentals and thriving in high-stakes engineering environments.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SLIDE 4: FAMILY -->
-                <section class="slide" id="slide-4">
-                    <div class="slide-layout centered">
-                        <div class="content-zone glass-box timeline-center">
-                            <div class="timeline-marker top">STRENGTH</div>
-                            <span class="milestone-label">THE PILLAR</span>
-                            <h2 class="slide-title">Family <span>Background</span></h2>
-                            <div class="detailed-text">
-                                <p>Throughout my journey, my family has been the bedrock of my resilience. Coming from a background that values hard work and integrity, I carry these values into every project I build.</p>
-                                <p>Their unwavering belief in my potential has been the driving force behind my academic and professional success.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SLIDE 5: FSSA -->
-                <section class="slide" id="slide-5">
-                    <div class="slide-layout">
-                        <div class="collage-zone">
-                            <div class="timeline-marker end">FLIGHT</div>
-                            <div class="mosaic-main">
-                                <img src="images/freshworks.jpg" alt="FSSA">
-                            </div>
-                        </div>
-                        <div class="content-zone">
-                            <span class="milestone-label">PHASE 05: FSSA JOURNEY</span>
-                            <h2 class="slide-title">Freshworks <span>STS</span></h2>
-                            <div class="detailed-text">
-                                <p>Currently at <b>Freshworks STS Software Academy</b>, I am honing my expertise in <b>Python, FastAPI, and PostgreSQL</b>. This journey is about professional transformation.</p>
-                                <p>Mastering complex backend architectures while refining professional communication and workplace ethics for a global career.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- TIMELINE PATH -->
-            <div class="timeline-path">
-                <div class="timeline-line">
-                    <div class="timeline-progress-bar"></div>
-                </div>
-                <div class="timeline-nodes">
-                    <div class="node-item active" data-index="0"><span>Roots</span></div>
-                    <div class="node-item" data-index="1"><span>School</span></div>
-                    <div class="node-item" data-index="2"><span>College</span></div>
-                    <div class="node-item" data-index="3"><span>Family</span></div>
-                    <div class="node-item" data-index="4"><span>FSSA</span></div>
+        <!-- 3. ROOTS SECTION -->
+        <div class="dash-box dash-roots dash-reveal">
+            <span class="box-label">The Foundation</span>
+            <div class="roots-visual">
+                <i class="fa-solid fa-bicycle"></i>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Inspired by Resilience</h3>
+                    <p style="font-size: 0.85rem; line-height: 1.4;">Coming from a humble background—my father sells flowers on a bicycle, and my mother is a homemaker. Their hard work is my fuel.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="deck-controls-v2">
-                <button class="slide-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="slide-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+        <!-- 4. TECH STACK GRID -->
+        <div class="dash-box dash-tech dash-reveal">
+            <span class="box-label">Tech Stack</span>
+            <div class="tech-icon"><i class="fa-brands fa-python"></i><span>PYTHON</span></div>
+            <div class="tech-icon"><i class="fa-solid fa-bolt"></i><span>FASTAPI</span></div>
+            <div class="tech-icon"><i class="fa-solid fa-database"></i><span>POSTGRES</span></div>
+            <div class="tech-icon"><i class="fa-brands fa-js"></i><span>JS</span></div>
+            <div class="tech-icon"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+            <div class="tech-icon"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+        </div>
+
+        <!-- 5. STATS MODULE -->
+        <div class="dash-box dash-stats dash-reveal">
+            <span class="box-label">Metrics</span>
+            <div class="stat-item">
+                <span class="stat-val">93%</span>
+                <span class="stat-label">Engineering Score</span>
             </div>
+            <div class="stat-item">
+                <span class="stat-val">03</span>
+                <span class="stat-label">Squad Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-val">01</span>
+                <span class="stat-label">Mention for Speaking</span>
+            </div>
+        </div>
+
+        <!-- 6. GROWTH & LEADERSHIP -->
+        <div class="dash-box dash-growth dash-reveal">
+            <span class="box-label">Transformation</span>
+            <div class="growth-flex">
+                <div class="growth-badge"><i class="fa-solid fa-microphone-lines"></i></div>
+                <div>
+                    <h3>Leadership Evolution</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.5; margin-top: 10px;">Overcoming stage fear to lead squads. Mastery in dividing responsibilities, clear communication, and professional collaboration.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. CERTIFICATES -->
+        <div class="dash-box dash-certs dash-reveal">
+            <span class="box-label">Verified Credentials</span>
+            <h3><i class="fa-solid fa-certificate"></i> Certifications</h3>
+            <div class="certs-grid">
+                <div class="cert-item">
+                    <img src="images/BSNL_Intern_Certificate.jpeg" alt="BSNL Internship Certificate">
+                    <p>BSNL Internship Certificate</p>
+                </div>
+                <div class="cert-item">
+                    <img src="images/Diploma_degree_certificate.jpeg" alt="Diploma Degree Certificate">
+                    <p>Diploma in Engineering</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. MISSION PANEL -->
+        <div class="dash-box dash-mission dash-reveal">
+            <h2>"TO BECOME A SKILLED WEB DEVELOPER WITH STRONG BACKEND EXPERTISE."</h2>
         </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Kamalesh E. Journey Timeline Mode.</p>
+        <div class="footer-content" style="justify-content: center;">
+            <p>&copy; 2026 Kamalesh E. Professional Portfolio Dashboard.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.dash-reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

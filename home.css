@@ -414,3 +414,326 @@
         height: 90%;
     }
 }
+
+/* About Section - Timeline Collage Layout */
+.about-timeline-collage {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    max-width: 1250px;
+    margin: 4rem auto;
+    align-items: center;
+}
+
+/* Image Side Layout */
+.collage-grid-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Consolidate All Milestones into a Neat 2x2 Grid */
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 220px);
+    gap: 1.2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.milestone-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.milestone-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-main);
+}
+
+.milestone-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.milestone-info span {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-main);
+    letter-spacing: 2px;
+}
+
+.milestone-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.milestone-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-main);
+    box-shadow: 0 20px 45px rgba(250, 204, 21, 0.15);
+}
+
+.milestone-item:hover img {
+    transform: scale(1.1);
+}
+
+.milestone-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    padding: 1.2rem 1rem 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.milestone-info span {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--accent-main);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.main-profile-frame {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 10px;
+    background: var(--bg-main);
+    border: 2px dashed var(--accent-main);
+    z-index: 5;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.main-profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Narrative Side Styling */
+.bio-header h3 {
+    font-size: 2.8rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.bio-header p {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.bio-header p span {
+    color: var(--accent-main);
+}
+
+.bio-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.bio-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.highlight-text {
+    color: var(--accent-main);
+    font-weight: 700;
+}
+
+.bio-body b {
+    color: #fff;
+    font-weight: 700;
+}
+
+.bio-footer-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bio-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+}
+
+.bio-stat i {
+    font-size: 1.5rem;
+    color: var(--accent-main);
+}
+
+.bio-stat span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dim);
+}
+
+/* Responsive Timeline Collage */
+@media (max-width: 1100px) {
+    .about-timeline-collage {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        padding: 0 2rem;
+    }
+
+    .collage-grid-side {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .main-profile-frame {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bio-header h3 {
+        font-size: 2.22rem;
+    }
+
+    .bio-footer-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .main-profile-frame {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Medium-Sized Professional Certificate Grid */
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cert-card-medium {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: all 0.4s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.cert-card-medium:hover {
+    background: rgba(250, 204, 21, 0.05);
+    border-color: var(--accent-main);
+    transform: translateY(-8px);
+}
+
+.cert-img-medium {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-img-medium img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cert-info-medium h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.cert-info-medium p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.cert-medium-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cert-img-medium:hover .cert-medium-overlay {
+    opacity: 1;
+}
+
+.cert-btn-small {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-main);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+    .milestone-grid,
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .milestone-grid {
+        grid-template-rows: auto;
+    }
+
+    .milestone-item {
+        height: 250px;
+    }
+}

@@ -126,69 +126,7 @@ if (menuBtn) {
     });
 }
 
-// Cinematic Timeline Logic
-const slides = document.querySelectorAll(".slide");
-const navNodes = document.querySelectorAll(".node-item");
-const progressBar = document.querySelector(".timeline-progress-bar");
-const prevSlideBtn = document.querySelector(".slide-btn.prev");
-const nextSlideBtn = document.querySelector(".slide-btn.next");
-const brandText = document.querySelector(".nav-brand span");
-let activeSlideIndex = 0;
 
-function showSlide(index) {
-    if (!slides.length) return;
-    if (index < 0 || index >= slides.length) return;
-
-    // Reset all
-    slides.forEach(s => s.classList.remove("active"));
-    navNodes.forEach(n => n.classList.remove("active"));
-
-    // Set active
-    slides[index].classList.add("active");
-    if (navNodes[index]) navNodes[index].classList.add("active");
-    activeSlideIndex = index;
-
-    // Update Progress
-    if (progressBar) {
-        const progress = (index / (slides.length - 1)) * 100;
-        progressBar.style.width = `${progress}%`;
-    }
-
-    // Update Brand Text
-    const categories = ["IDENTITY", "FOUNDATION", "ACADEMICS", "STRENGTH", "EVOLUTION"];
-    if (brandText) brandText.textContent = categories[index];
-}
-
-if (nextSlideBtn) {
-    nextSlideBtn.addEventListener("click", () => {
-        const next = (activeSlideIndex + 1) % slides.length;
-        showSlide(next);
-    });
-}
-
-if (prevSlideBtn) {
-    prevSlideBtn.addEventListener("click", () => {
-        const prev = (activeSlideIndex - 1 + slides.length) % slides.length;
-        showSlide(prev);
-    });
-}
-
-navNodes.forEach((node, i) => {
-    node.addEventListener("click", () => showSlide(i));
-});
-
-// Init
-document.addEventListener("DOMContentLoaded", () => {
-    if (slides.length > 0) {
-        showSlide(0);
-    }
-});
-
-// Keyboard
-document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") nextSlideBtn?.click();
-    if (e.key === "ArrowLeft") prevSlideBtn?.click();
-});
 
 /* Intro Overlay Interaction */
 const introOverlay = document.getElementById("intro-overlay");
