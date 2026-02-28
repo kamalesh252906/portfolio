@@ -147,3 +147,65 @@ if (introOverlay && exploreBtn) {
         }, 800); // 800ms matches css transition
     });
 }
+
+// LifeSkills Slider Logic
+const sliderTrack = document.querySelector(".ls-slider-track");
+const slides = document.querySelectorAll(".ls-slide");
+const dots = document.querySelectorAll(".nav-dot");
+const progressBar = document.querySelector(".ls-progress-bar");
+let currentSlide = 0;
+const slideDuration = 6000; // 6 seconds
+
+function showSlide(index) {
+    if (!sliderTrack) return;
+
+    // Slide horizontal movement
+    sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    if (slides[index]) slides[index].classList.add("active");
+    if (dots[index]) dots[index].classList.add("active");
+    currentSlide = index;
+
+    // Reset and start progress bar animation
+    resetProgressBar();
+}
+
+function resetProgressBar() {
+    if (!progressBar) return;
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+
+    // Force reflow
+    progressBar.offsetHeight;
+
+    progressBar.style.transition = `width ${slideDuration}ms linear`;
+    progressBar.style.width = '100%';
+}
+
+function nextSlide() {
+    if (slides.length === 0) return;
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+}
+
+// Initial setup
+if (slides && slides.length > 0) {
+    showSlide(0);
+    let slideInterval = setInterval(nextSlide, slideDuration);
+
+    // Interaction
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            clearInterval(slideInterval);
+            showSlide(index);
+            slideInterval = setInterval(nextSlide, slideDuration);
+        });
+    });
+}
+
+
+
+

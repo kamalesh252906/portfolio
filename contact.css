@@ -1,11 +1,15 @@
 /* Contact Section */
+.contact {
+    padding: 6rem 10% 4rem;
+}
+
 .contact-card {
     background: var(--accent-main);
-    padding: 8rem 5rem;
-    border-radius: 60px;
+    padding: 5rem 3rem;
+    border-radius: 40px;
     color: var(--bg-primary);
     text-align: center;
-    max-width: 1000px;
+    max-width: 850px;
     margin: 0 auto;
     box-shadow: 0 40px 80px rgba(250, 204, 21, 0.2);
 }
@@ -16,24 +20,24 @@
 
 .contact-card p {
     color: rgba(11, 15, 25, 0.8);
-    font-size: 1.3rem;
-    margin-top: 1rem;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
 }
 
 .contact-methods {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-top: 5rem;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
 }
 
 .contact-btn {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     background: rgba(11, 15, 25, 0.1);
-    padding: 2.5rem;
-    border-radius: 24px;
+    padding: 1.8rem 2rem;
+    border-radius: 20px;
     text-decoration: none;
     border: 1px solid rgba(11, 15, 25, 0.1);
     transition: var(--transition-smooth);
@@ -60,7 +64,7 @@
 .contact-btn .text span {
     color: var(--bg-primary);
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 

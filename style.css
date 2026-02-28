@@ -343,67 +343,59 @@ footer {
   margin: 0 auto;
 }
 
-.skills-two-column {
+.skills-modern-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 .skill-item {
-  margin-bottom: 3rem;
-  background: rgba(17, 24, 39, 0.4);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid var(--glass-border);
-  transition: var(--transition-fast);
+  width: 100%;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2.2rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .skill-item:hover {
   border-color: var(--accent-main);
-  transform: translateX(10px);
+  transform: translateY(-12px) scale(1.03);
+  background: rgba(250, 204, 21, 0.08);
+  box-shadow: 0 20px 50px rgba(250, 204, 21, 0.15);
 }
 
 .skill-info {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .skill-name {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.1rem;
+  gap: 18px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-.progress-line {
-  height: 10px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
+.skill-name i {
+  font-size: 2.22rem;
+  transition: transform 0.4s ease;
 }
 
-.progress-line span {
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: var(--accent-gradient);
-  border-radius: 20px;
-  box-shadow: 0 0 15px var(--accent-glow);
-  display: block;
-  animation: slideIn 1.5s ease-out forwards;
+.skill-item:hover .skill-name i {
+  transform: rotate(10deg) scale(1.1);
 }
 
-@keyframes slideIn {
-  from {
-    width: 0;
-  }
-}
 
 /* English Skills Styles */
 .languages {
@@ -470,10 +462,11 @@ footer {
 
 .lang-percentage {
   display: block;
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--accent-main);
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0.9;
 }
 
 /* Specific Progress line adjustment for cards */
